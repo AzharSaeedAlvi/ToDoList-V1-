@@ -28,9 +28,8 @@ var day= today.toLocaleDateString("en-US",options);
   });
 
   app.post("/", function(req,res){
-   item = req.body.newItem;                                  // Before setting up body we need to keep in mind that we should have setup body-parser.
-  console.log(items);
-
+  var item = req.body.newItem;                                  // Before setting up body we need to keep in mind that we should have setup body-parser.
+  items.push(item);
   res.redirect("/");
 
 });
